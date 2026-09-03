@@ -11,10 +11,8 @@ repo_name = "syabu32/uprp-educational_materials"
 edit_uri = "edit/main/docs/"
 
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
   { "サカロボ" = [
-    { "初めに" = "サカロボ/初めに.md" },
+    { "はじめに" = "サカロボ/はじめに.md" },
   ] },
 ]
 
