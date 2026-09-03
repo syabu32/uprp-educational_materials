@@ -11,8 +11,10 @@ repo_name = "syabu32/uprp-educational_materials"
 edit_uri = "edit/main/docs/"
 
 nav = [
+  { "ドキュメントの使い方" = "ドキュメントの使い方.md" },
   { "サカロボ" = [
     { "はじめに" = "サカロボ/はじめに.md" },
+    { "マイコンについて知る" = "サカロボ/マイコンについて知る.md" },
   ] },
 ]
 
@@ -37,7 +39,7 @@ features = [
   # "header.autohide",
   # "navigation.expand",
   "navigation.footer",
-  "navigation.indexes",
+  # "navigation.indexes",
   "navigation.instant",
   "navigation.instant.prefetch",
   # "navigation.instant.progress",
