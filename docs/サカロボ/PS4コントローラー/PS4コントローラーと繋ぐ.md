@@ -21,6 +21,9 @@ PS4コントローラー → (Bluetooth) → Bluetoothドングル → (USB) →
 ```cpp
 #include <PS4BT.h>
 #include <usbhub.h>
+#ifdef dobogusinclude
+#include <spi4teensy3.h>
+#endif
 #include <SPI.h>
 
 USB Usb;
