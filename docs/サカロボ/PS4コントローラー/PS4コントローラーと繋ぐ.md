@@ -33,12 +33,14 @@ PS4BT PS4(&Btd, PAIR);
 void setup() {
     Serial.begin(9600);
 
-    if (Usb.Init() == -1) {
-        Serial.println("USBホストシールドが見つかりません");
-        while (true) {
+    #if !defined(__MIPSEL__)
+        while (!Serial);
+    #endif
+        if (Usb.Init() == -1) {
+            Serial.print("USBホストシールドが見つかりません");
+            while (1);
         }
-    }
-    Serial.println("PS4コントローラーを待っています");
+        Serial.println("PS4コントローラーを待っています");
 }
 
 void loop() {
@@ -145,12 +147,14 @@ PS4コントローラーが繋がっていれば`true`、繋がっていなけ�
         Serial.begin(9600);
         pinMode(STATUS_LED_PIN, OUTPUT);
 
-        if (Usb.Init() == -1) {
-            Serial.println("USBホストシールドが見つかりません");
-            while (true) {
+        #if !defined(__MIPSEL__)
+            while (!Serial);
+        #endif
+            if (Usb.Init() == -1) {
+                Serial.print("USBホストシールドが見つかりません");
+                while (1);
             }
-        }
-        Serial.println("PS4コントローラーを待っています");
+            Serial.println("PS4コントローラーを待っています");
     }
 
     void loop() {
