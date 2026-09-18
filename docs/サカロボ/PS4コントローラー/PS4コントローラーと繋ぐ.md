@@ -127,6 +127,9 @@ PS4コントローラーが繋がっていれば`true`、繋がっていなけ�
     ```cpp
     #include <PS4BT.h>
     #include <usbhub.h>
+    #ifdef dobogusinclude
+    #include <spi4teensy3.h>
+    #endif
     #include <SPI.h>
 
     #define STATUS_LED_PIN 13
